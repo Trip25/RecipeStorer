@@ -134,12 +134,14 @@ function createRecipeView({ title, ingredients, instructions, image, id }) {
 
   // Add delete recipe button and listener
   const deleteButton = document.createElement("button");
+  deleteButton.id = "delete-button";
   deleteButton.innerText = "Delete recipe";
   deleteButton.addEventListener("click", () => (deleteRecipe(id)));
   article.appendChild(deleteButton)
 
   //Add edit recipe button and listener
   const editButton = document.createElement("button");
+  editButton.id = "edit-selected-recipeBtn";
   editButton.innerText = "Edit recipe";
   editButton.addEventListener("click", () => (fillEditInput(id, title, ingredients, instructions, image)));
   article.appendChild(editButton)
